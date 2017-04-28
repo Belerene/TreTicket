@@ -1,0 +1,86 @@
+﻿<Window x:Class="TreTicket.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TreTicket"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="613.057" Width="960">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFC1C1C1" Offset="0"/>
+            <GradientStop Color="#FFD4D4D4" Offset="1"/>
+            <GradientStop Color="#FF838383" Offset="0.029"/>
+            <GradientStop Color="#FFE2E2E2" Offset="0.503"/>
+            <GradientStop Color="#FF838383" Offset="0.973"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="320*"/>
+            <ColumnDefinition Width="313*"/>
+            <ColumnDefinition Width="319*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="textBlockTRETicket" Height="31" TextWrapping="Wrap" VerticalAlignment="Top" Margin="12.333,10,7.667,0" Grid.ColumnSpan="3" FontWeight="Bold" FontSize="21.333"><Run Text="TRETicket"/></TextBlock>
+        <Grid x:Name="gridClu" Height="28" Margin="0,0,-47.252,0" VerticalAlignment="Top">
+            <Button x:Name="buttonNWE" Content="NWE" Height="28" Margin="12.327,0,0,-79.334" VerticalAlignment="Bottom" Click="buttonNWE_Click" HorizontalAlignment="Left" Width="56.667" Background="#FFF3F3F3"/>
+            <Button x:Name="buttonMEA" Content="MEA" HorizontalAlignment="Left" Height="28" Margin="73.994,0,0,-79.334" VerticalAlignment="Bottom" Width="57.667" Click="buttonMEA_Click" Background="#FFF3F3F3"/>
+            <Button x:Name="buttonCEE" Content="CEE" Height="28" Margin="136.661,0,173.257,-79.334" VerticalAlignment="Bottom" Click="buttonCEE_Click" Background="#FFF3F3F3"/>
+            <Button x:Name="buttonSWE" Content="SWE" Height="28" Margin="0,0,113.785,-79.334" VerticalAlignment="Bottom" Click="buttonSWE_Click" HorizontalAlignment="Right" Width="54.472" Background="#FFF3F3F3"/>
+            <Button x:Name="buttonMUC" Content="MUC" HorizontalAlignment="Right" Height="28" Margin="0,0,51.118,-79.334" VerticalAlignment="Bottom" Width="57.667" Click="buttonMUC_Click" Background="#FFF3F3F3"/>
+            <Button x:Name="buttonGER" Content="GER" Height="28" Margin="0,0,-12.333,-79.334" VerticalAlignment="Bottom" Click="buttonGER_Click" HorizontalAlignment="Right" Width="58.451" BorderThickness="1" BorderBrush="#FF707070" Background="#FFF3F3F3"/>
+        </Grid>
+        <Rectangle x:Name="rectTask" Fill="#FFF4F4F5" Margin="12.333,161.557,6.193,9.943" Stroke="Black"/>
+        <Rectangle x:Name="rectSubtask" Fill="#FFF4F4F5" Margin="0,161.557,3.034,9.943" Stroke="Black" Grid.Column="1"/>
+        <Rectangle x:Name="rectRemarks" Fill="#FFF4F4F5" Margin="2.967,0,11.001,43.333" Stroke="Black" Grid.Column="2" Height="51.557" VerticalAlignment="Bottom"/>
+        <Rectangle x:Name="rectActiveTickets" Fill="#FFF4F4F5" Margin="1.966,161.5,11.001,134.333" Stroke="Black" Grid.Column="2"/>
+        <TextBlock x:Name="textBlockTask" Height="29.5" Margin="12.333,127,6.193,0" TextWrapping="Wrap" Text="Task" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" TextAlignment="Center" FontSize="18.667">
+            <TextBlock.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Gray" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
+        <TextBlock x:Name="textBlockSubtask" Height="29.5" Margin="0.301,127,2.033,0" TextWrapping="Wrap" Text="Subtask" VerticalAlignment="Top" FontSize="18.667" FontWeight="Bold" TextAlignment="Center" Grid.Column="1">
+            <TextBlock.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Gray" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
+        <TextBlock x:Name="textBlockActiveTickets" Height="29.5" Margin="1.966,127,11.001,0" TextWrapping="Wrap" Text="Active Tickets" VerticalAlignment="Top" Grid.Column="2" FontSize="18.667" FontWeight="Bold" TextAlignment="Center">
+            <TextBlock.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Gray" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
+        <TextBlock x:Name="textBlockRemarks" Height="29.5" Margin="2.967,0,11.001,99.833" TextWrapping="Wrap" Text="Remarks" VerticalAlignment="Bottom" Grid.Column="2" TextAlignment="Center" FontSize="18.667" FontWeight="Bold">
+            <TextBlock.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Gray" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
+        <Button x:Name="buttonStart" Content="Start" Grid.Column="2" Height="33.333" Margin="1.966,0,0,9.943" VerticalAlignment="Bottom" Click="buttonStart_Click" HorizontalAlignment="Left" Width="152.367" Background="#FFF3F3F3"/>
+        <Button x:Name="buttonFinish" Content="Finish" Grid.Column="2" Height="33.333" Margin="154.333,0,10,9.943" VerticalAlignment="Bottom" Click="buttonFinish_Click" Background="#FFF3F3F3"/>
+        <ScrollViewer x:Name="scrollTask" Margin="7.999,161.5,6.193,10" CanContentScroll="True" VerticalScrollBarVisibility="Auto">
+            <StackPanel x:Name="stkTask" Height="406.557" Width="287"/>
+        </ScrollViewer>
+        <ScrollViewer x:Name="scrollSubtask" Margin="0.301,161.5,2.033,10" Grid.Column="1" CanContentScroll="True" VerticalScrollBarVisibility="Auto">
+            <StackPanel x:Name="stkSubtask" Width="291" Height="411.557"/>
+        </ScrollViewer>
+        <ScrollViewer x:Name="scrollActiveTickets" Margin="2.966,161.5,11.001,134.333" Grid.Column="2" CanContentScroll="True" VerticalScrollBarVisibility="Auto">
+            <StackPanel x:Name="stkActiveTickets" Width="284" Height="285.974"/>
+        </ScrollViewer>
+        <TextBox x:Name="txtRemarks" Grid.Column="2" Height="51.557" Margin="2.967,0,11.001,43.276" TextWrapping="Wrap" VerticalAlignment="Bottom"/>
+        <TextBlock x:Name="activeSelections" Grid.ColumnSpan="3" Height="28.334" Margin="10,46,11.001,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="resize" Content="Resize" Height="28" Margin="0,79.334,10,0" VerticalAlignment="Top" Click="resize_Click" HorizontalAlignment="Right" Width="58.451" Grid.Column="2" BorderThickness="1" BorderBrush="#FF707070" Visibility="Hidden"/>
+        <DatePicker Grid.Column="2" Height="31" Margin="145.999,10,11.001,0" VerticalAlignment="Top" Visibility="Hidden"/>
+
+    </Grid>
+</Window>
