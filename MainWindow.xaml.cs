@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -400,12 +400,12 @@ namespace TreTicket
                     //setDefaultButtonColor(btn);
                     //btn.Background = new SolidColorBrush(Colors.Red);
                 }
+                //ticketBtn.Background = new SolidColorBrush(Colors.Brown);
+                setupPathToTicket((string)ticketBtn.Content);
                 pauseButtonReady = true;
                 buttonStart.Content = "Pause";
                 activeTicketID = Int32.Parse(tagID);
                 ticketBtn.BorderBrush = new SolidColorBrush(Colors.Red);
-                //ticketBtn.Background = new SolidColorBrush(Colors.Brown);
-                setupPathToTicket((string)ticketBtn.Content);
             }
         }
 
